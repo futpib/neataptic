@@ -1,5 +1,5 @@
 {
-  "name": "neataptic",
+  "name": "@futpib/neataptic",
   "version": "1.4.7",
   "description": "Architecture-free neural network library with genetic algorithm implementations",
   "main": "./src/neataptic",
