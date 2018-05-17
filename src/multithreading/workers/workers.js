@@ -4,10 +4,10 @@
 
 var workers = {
   node: {
-    TestWorker: require('./node/testworker')
+    TestWorker: (!process.browser) && require('./node/testworker')
   },
   browser: {
-    TestWorker: require('./browser/testworker')
+    TestWorker: process.browser && require('./browser/testworker')
   }
 };
 
