@@ -12,7 +12,7 @@ var path = require('path');
 function TestWorker (dataSet, cost) {
   this.worker = cp.fork(path.join(__dirname, '/worker'));
 
-  this.worker.send({ set: dataSet, cost: cost.name });
+  this.worker.send({ set: dataSet, cost: cost.toString() });
 }
 
 TestWorker.prototype = {

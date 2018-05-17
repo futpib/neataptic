@@ -14,7 +14,7 @@ process.on('message', function (e) {
 
     process.send(result);
   } else {
-    cost = methods.cost[e.cost];
+    cost = eval(`(${e.cost})`);
     set = multi.deserializeDataSet(e.set);
   }
 });
